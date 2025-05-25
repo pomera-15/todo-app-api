@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo管理アプリ</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 Todo管理アプリ</h1>
+        </header>
+
+        <main>
+            <!-- 新規TODO追加フォーム -->
+            <section class="add-todo-section">
+                <h2>新しいTodoを追加</h2>
+                <form id="add-todo-form" class="add-todo-form">
+                    <input 
+                        type="text" 
+                        id="todo-title" 
+                        placeholder="Todoのタイトル" 
+                        required
+                        maxlength="200"
+                    >
+                    <textarea 
+                        id="todo-description" 
+                        placeholder="詳細説明（任意）"
+                        maxlength="1000"
+                        rows="2"
+                    ></textarea>
+                    <button type="submit">追加</button>
+                </form>
+            </section>
+
+            <!-- フィルター -->
+            <section class="filter-section">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">すべて</button>
+                    <button class="filter-btn" data-filter="active">未完了</button>
+                    <button class="filter-btn" data-filter="completed">完了済み</button>
+                </div>
+            </section>
+
+            <!-- TODOリスト -->
+            <section class="todo-list-section">
+                <div id="todo-list" class="todo-list">
+                    <!-- TodoアイテムはJavaScriptで動的に生成 -->
+                </div>
+                <div id="empty-state" class="empty-state" style="display: none;">
+                    <p>Todoがありません</p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Todo管理アプリ</p>
+        </footer>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
