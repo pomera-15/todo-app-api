@@ -154,3 +154,4 @@ Thumbs.db
 # Project specific
 server.log
 internal-docs/
+.claude/
